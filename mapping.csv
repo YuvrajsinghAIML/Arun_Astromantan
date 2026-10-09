@@ -1,0 +1,376 @@
+Problem Statement Number,Problem Statement
+1,"SIGNAL LOST: The Pulsar Detection Challenge
+PROBLEM STATEMENT
+Astronomical surveys generate large volumes of radio-signal data containing potential pulsar signals. However, real-world data can contain missing, inconsistent, duplicated, or corrupted values, making reliable detection challenging.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided data.
+● Identify relevant features.
+● Classify signals as Pulsar (1) or Non-Pulsar (0).
+● Evaluate the reliability of your predictions.
+OBJECTIVE
+Achieve reliable pulsar detection while developing a preprocessing and modelling approach that can handle imperfect data."
+2,"CUSTOMER RISK: The Interstellar Satisfaction Challenge
+PROBLEM STATEMENT
+Interstellar travel companies collect extensive customer booking and journey data, including travel class, destination, pricing, journey duration, companions, booking patterns, and customer preferences.
+The challenge is to transform this raw data into a system capable of identifying customers at risk of dissatisfaction and assigning each customer a meaningful satisfaction score and intervention priority.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided customer data.
+● Engineer meaningful features from booking and travel information.
+● Predict whether a customer is at risk of dissatisfaction.
+● Predict the customer's satisfaction score.
+● Calculate an intervention score for each customer.
+● Rank customers according to their need for intervention.
+OBJECTIVE
+Develop a Customer Risk Prediction and Scoring System that combines dissatisfaction risk and predicted satisfaction to identify customers who should be prioritized for proactive intervention.
+PROBLEM-SPECIFIC FORMULAS
+Satisfaction Gap = max(0, satisfaction threshhold − Predicted Satisfaction Score)
+Intervention Score = Dissatisfaction Probability × Satisfaction Gap
+Customers should be ranked in descending order of Intervention Score, with higher scores indicating greater intervention priority."
+3,"ASTEROID MINING: The Cosmic Resource Viability Challenge
+PROBLEM STATEMENT
+Asteroid mining companies have access to large amounts of asteroid data, including asteroid diameter, estimated resource value, delta-V (travel accessibility), orbital class, and spectral classification.
+The challenge is to transform this raw asteroid data into a machine-learning system that can estimate the potential mining profit of an asteroid and determine whether it is a viable high-value mining target.
+Your goal is to build a predictive pipeline that first estimates the economic potential of an asteroid and then uses that prediction, along with the asteroid's physical and accessibility characteristics, to determine its mining viability.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Understand and clean the provided asteroid dataset.
+● Engineer meaningful physical and accessibility-based features.
+● Predict the potential profit of mining each asteroid.
+● Use the predicted profit and asteroid characteristics to classify whether an asteroid is a high-value / viable mining target.
+● Identify the asteroids with the strongest potential for future mining missions.
+OBJECTIVE
+Develop an Asteroid Mining Profit and Viability Prediction System that combines economic prediction and viability classification.
+The system should answer two key questions:
+How profitable could this asteroid be?
+Based on its predicted profit and characteristics, is it a viable high-value mining target?
+The final system should provide a predicted profit and a mining-viability probability for each asteroid, allowing potential mining targets to be identified from the dataset."
+4,"Problem Statement
+Astronomical transit data contains valuable information for identifying planetary objects, but directly classifying them can be challenging.
+OUR MISSION
+Build a collaborative ML pipeline that:
+● Uses Linear Regression 1 to predict Angular Separation.
+● Passes this prediction to Linear Regression 2 to predict Transit Duration.
+● Combines both predictions and passes them to Logistic Regression.
+● Uses Logistic Regression to perform the final Planet Classification (0/1).
+OBJECTIVE
+Create a sequential ML pipeline where the output of one model becomes the input for the next, allowing multiple models to work together for reliable planet classification."
+5,"THE LOST STELLAR SIGNAL
+PROBLEM STATEMENT
+Two astronomical records, born from different observations of the same hidden universe, have been left behind as an incomplete trail of evidence.
+Somewhere within these measurements lies a continuous stellar slope—but the path to it is obscured by noise, contradictions, misleading patterns, and clues that may not be what they seem.
+Your task is to uncover the hidden relationship and build a machine-learning system capable of predicting the unknown slope.
+YOUR MISSION
+● Discover what the data is trying to reveal.
+● Uncover meaningful relationships hidden among the observations.
+● Deal with uncertainty, anomalies, and misleading information.
+● Construct a model that can reliably predict slope.
+OBJECTIVE
+Can you solve the trail of astronomical clues and reveal the hidden stellar slope?"
+6,"COSMIC IDENTITY CRISIS
+The Sky-Object Classification Challenge
+PROBLEM STATEMENT
+The Sloan Digital Sky Survey has photographed millions of points of light across the sky — but a
+telescope doesn't know a star from a galaxy from a quasar. It only records brightness and position.
+Real observational data is also often messy: sensor glitches, duplicate exposures, and inconsistent
+labeling all creep in.
+YOUR MISSION
+● Clean and validate the provided photometric data.
+● Engineer features from positional and brightness measurements.
+● Classify each object as a STAR, GALAXY, or QSO.
+● Evaluate how confidently and reliably your model can tell them apart.
+OBJECTIVE
+Build a classification pipeline that turns raw, imperfect sky-survey measurements into accurate object
+identifications.
+EVALUATION
+● Multi-class classification performance (accuracy / F1)
+● Data-cleaning and preprocessing quality
+● Model robustness to noisy or invalid input
+● Quality of reasoning and methodology"
+7,"Problem Statement
+Astronomical surveys generate large volumes of white dwarf data containing physical parameters
+(temperature, surface gravity, mass) and photometric magnitudes (u, g, r, i, z). However, real-world
+data can contain missing, inconsistent, duplicated, or corrupted values, making reliable classification
+challenging.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided data.
+● Identify relevant features.
+● Classify white dwarfs by spectral type (DA, DB, and other rarer classes).
+● Evaluate the reliability of your predictions.
+OBJECTIVE
+Achieve reliable spectral classification of white dwarfs while developing a preprocessing and
+modelling approach that can handle imperfect data.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Data-cleaning and preprocessing
+● Model robustness
+● Quality of reasoning and methodology"
+8,"Problem Statement
+Astronomical surveys track hundreds of thousands of asteroids, each described by a set of orbital
+parameters. However, real-world data can contain missing, inconsistent, duplicated, or corrupted
+values, making reliable classification challenging.
+Your Mission
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided data.
+● Identify relevant features.
+● Classify each asteroid into its correct orbit class (e.g. Main-Belt, Near-Earth, Trojan,
+Trans-Neptunian, etc.).
+● Evaluate the reliability of your predictions.
+Objective
+Achieve reliable orbit classification while developing a preprocessing and modelling approach that
+can handle imperfect data.
+Evaluation
+Solutions will be evaluated on:
+● Classification performance
+● Data-cleaning and preprocessing
+● Model robustness
+● Quality of reasoning and methodology"
+9,"PROBLEM STATEMENT-hyg
+Sky-survey telescopes record a star's distance and brightness far more easily than its exact spectral
+type, which normally requires slow, resource-intensive spectroscopic observation. However,
+real-world survey data can contain missing, inconsistent, duplicated, or corrupted values, making
+reliable classification challenging.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided data.
+● Identify relevant features.
+● Classify each star's spectral type as O, B, A, F, G, K, or M.
+● Evaluate the reliability of your predictions.
+OBJECTIVE
+Achieve reliable stellar spectral classification while developing a preprocessing and modelling
+approach that can handle imperfect data.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Data-cleaning and preprocessing
+● Model robustness
+● Quality of reasoning and methodology"
+10,"ROCKS FROM THE SKY: The Meteorite Fall Classification Challenge
+PROBLEM STATEMENT
+Meteorite-fall records document thousands of space rocks recovered around the world, each logged with its mass, the year it was recorded, its landing coordinates, and how it was discovered. However, real-world data can contain missing, inconsistent, duplicated, or corrupted values, making reliable classification challenging.
+YOUR MISSION
+● Understand and clean the provided data.
+● Identify relevant features.
+● Classify meteorites as Fell (1) or Found (0).
+● Evaluate the reliability of your predictions.
+OBJECTIVE
+Achieve reliable meteorite fall-type classification while developing a preprocessing and modelling approach that can handle imperfect data.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Data-cleaning and preprocessing
+● Model robustness
+● Quality of reasoning and methodology"
+11,"SUNSPOT CYCLE: The Sunspot Prediction Challenge
+PROBLEM STATEMENT
+Sunspots are temporary regions of intense magnetic activity on the surface of the Sun. Their number changes over time and is closely associated with the Sun's activity cycle. Analysing historical solar observations can help us understand and model these variations.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided astronomical data.
+● Handle missing, inconsistent, or invalid values appropriately.
+● Identify meaningful patterns within the solar observations.
+● Predict the Number of Sunspots.
+● Evaluate the reliability of your predictions.
+OBJECTIVE
+Develop an effective machine-learning approach for predicting the Number of Sunspots, while applying suitable preprocessing and data-handling techniques to obtain reliable predictions from historical solar observations."
+12,"STARS BY THE NUMBERS: The Stellar Mass Prediction Challenge
+PROBLEM STATEMENT
+Galaxies contain billions of stars whose combined stellar mass provides important information about their formation and evolution. Astronomical surveys collect observations of distant galaxies, but analysing these observations and estimating their physical properties can be challenging, especially when real-world datasets contain missing, invalid, or inconsistent values.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided astronomical data.
+● Handle missing, invalid, or inconsistent observations appropriately.
+● Identify meaningful patterns within the astronomical observations.
+● Predict the Log Stellar Mass of a galaxy.
+● Evaluate the reliability and accuracy of your predictions.
+OBJECTIVE
+Develop an effective machine-learning approach for predicting the Log Stellar Mass of galaxies while applying suitable data-cleaning and preprocessing techniques to obtain reliable predictions from astronomical survey data."
+13,"COSMIC IDENTITY: The Stellar Object Classification Challenge
+PROBLEM STATEMENT
+Modern astronomical surveys generate enormous amounts of data containing different types of celestial objects. Distinguishing between stars, quasars, and galaxies is an important task for organizing astronomical observations and enabling further scientific analysis. However, real-world survey data can contain missing, duplicated, invalid, or irrelevant information, making reliable classification challenging.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided astronomical survey data.
+● Handle missing, duplicated, invalid, or inconsistent values appropriately.
+● Identify meaningful patterns within the observations.
+● Classify each astronomical object as STAR, QSO, or GALAXY.
+● Evaluate the reliability and performance of your predictions.
+OBJECTIVE
+Develop an effective machine-learning approach for classifying astronomical objects as STAR, QSO, or GALAXY, while applying suitable data-cleaning and preprocessing techniques to obtain reliable results from imperfect astronomical survey data."
+14,"SIGNAL FROM SPACE: The Gamma-Ray Detection Challenge
+PROBLEM STATEMENT
+Ground-based gamma-ray observatories collect large amounts of data while studying high-energy phenomena in the universe. However, distinguishing genuine gamma-ray events from background hadron events is a challenging task, particularly when working with imperfect astronomical observations.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided astronomical data.
+● Handle missing, inconsistent, duplicated, or invalid values appropriately.
+● Identify meaningful patterns within the observations.
+● Classify detected events as Gamma or Hadron.
+● Evaluate the reliability and performance of your predictions.
+OBJECTIVE
+Develop an effective machine-learning approach for classifying astronomical events as Gamma or Hadron, while applying suitable data-cleaning and preprocessing techniques to obtain reliable predictions from imperfect observational data."
+15,"WORLDS BEYOND: The Exoplanet Analysis Challenge
+PROBLEM STATEMENT
+The Kepler Space Telescope has revealed thousands of potential worlds beyond our Solar System by observing tiny changes in the brightness of distant stars. These observations contain valuable information about planetary transits, orbital characteristics, stellar properties, and possible exoplanet candidates.
+However, astronomical survey data is rarely analysis-ready. Missing measurements, redundant attributes, extreme observations, uncertain values, and irrelevant identifiers can significantly affect the reliability of a machine-learning model.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Understand and clean the provided Kepler observations.
+● Identify the most relevant planetary and stellar characteristics.
+● Develop a suitable predictive model using the available measurements.
+● Analyse how different preprocessing decisions influence model performance.
+● Evaluate the reliability of the final predictions.
+OBJECTIVE
+Extract meaningful relationships from Kepler's planetary and stellar measurements and develop a reliable predictive system while demonstrating effective preprocessing, feature selection, and modelling decisions.
+EVALUATION
+Solutions will be evaluated on:
+● Predictive performance
+● Data cleaning and preprocessing
+● Feature selection and justification
+● Model robustness
+● Quality of reasoning and methodology"
+16,"COSMIC SENTINEL: The Near-Earth Object Risk Challenge
+PROBLEM STATEMENT
+Thousands of asteroids and other Near-Earth Objects travel through regions of space relatively close to Earth's orbit. Astronomical observations provide information such as object brightness, estimated diameter, relative velocity, and miss distance that can help distinguish potentially hazardous objects from ordinary ones.
+Real observational records, however, may contain irrelevant identifiers, incomplete measurements, extreme values, redundant information, and highly uneven class distributions. A reliable system must therefore do more than simply train a classifier.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Analyse and preprocess Near-Earth Object observations.
+● Identify characteristics associated with potentially hazardous objects.
+● Handle imperfections and possible imbalance within the dataset.
+● Classify objects according to their potential hazard status.
+● Evaluate the reliability of the resulting predictions.
+OBJECTIVE
+Develop a reliable hazard-classification system capable of extracting meaningful patterns from Near-Earth Object observations while remaining robust to imperfect astronomical data.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Treatment of class imbalance
+● Data-cleaning and preprocessing
+● Feature analysis and selection
+● Model robustness and reasoning"
+17,"DEEP SKY DIVIDE: The Star–Galaxy Classification Challenge
+PROBLEM STATEMENT
+Large sky surveys such as the Sloan Digital Sky Survey observe enormous numbers of astronomical sources using multiple photometric measurements. While stars and galaxies may appear similar in raw telescope observations, their measured brightness profiles and structural properties contain patterns that allow them to be distinguished computationally.
+The challenge becomes harder when datasets contain unnecessary attributes, confusing measurements, unusual observations, and information that may introduce bias or leakage into a model.
+YOUR MISSION
+Build a robust machine-learning pipeline that can:
+● Explore and preprocess multi-band astronomical survey measurements.
+● Determine which photometric and structural properties are informative.
+● Distinguish stellar objects from galaxies.
+● Detect and appropriately handle problematic observations.
+● Evaluate how reliably the model generalizes to unseen objects.
+OBJECTIVE
+Develop an effective astronomical object-classification pipeline that distinguishes stars from galaxies using meaningful survey measurements and well-justified preprocessing.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Feature selection and interpretation
+● Data preprocessing
+● Generalization and model robustness
+● Quality of methodology and reasoning"
+18,"STARLIGHT DECODED: The Stellar Intelligence Challenge
+PROBLEM STATEMENT
+Modern stellar surveys record large numbers of properties for stars, including brightness, colour, motion, distance-related measurements, temperature indicators, surface characteristics, and other astrophysical quantities.
+Such high-dimensional astronomical datasets introduce a different problem: not every available measurement is equally useful. Missing observations, redundant parameters, measurement uncertainties, correlated variables, and extreme stellar objects can substantially influence machine-learning results.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Explore and clean the provided stellar measurements.
+● Identify informative stellar characteristics among many available attributes.
+● Discover relationships between observable and physical stellar properties.
+● Develop an appropriate predictive model for the selected task.
+● Evaluate the scientific and statistical reliability of the predictions.
+OBJECTIVE
+Transform complex stellar survey measurements into a robust predictive system by applying thoughtful preprocessing, feature selection, and machine-learning methodology.
+EVALUATION
+Solutions will be evaluated on:
+● Predictive performance
+● Handling of missing and high-dimensional data
+● Feature selection and justification
+● Model robustness
+● Quality of reasoning and methodology"
+19,"PLANETARY FORGE: The Celestial Environment Prediction Challenge
+PROBLEM STATEMENT
+A celestial body's environment is shaped by a complex interaction of physical properties, orbital behaviour, and characteristics of its host star. Factors such as size, density, gravity, orbital distance, stellar radiation, and atmospheric conditions can together influence the conditions experienced by a planetary body.
+The provided dataset combines physical and orbital characteristics to create a challenging environment for discovering these relationships through machine learning.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Analyse the physical, orbital, and host-star characteristics of celestial bodies.
+● Identify the variables most strongly related to environmental conditions.
+● Detect redundant, noisy, or problematic observations.
+● Develop a predictive model for a relevant planetary property.
+● Evaluate the reliability and limitations of the resulting predictions.
+OBJECTIVE
+Model the relationship between celestial-body characteristics and planetary environmental conditions while demonstrating effective feature analysis, preprocessing, and predictive modelling.
+EVALUATION
+Solutions will be evaluated on:
+● Predictive performance
+● Feature engineering and selection
+● Data preprocessing
+● Model robustness
+● Scientific reasoning and methodology
+● Dataset Note: This challenge uses a physics-inspired augmented dataset containing original Solar-System records together with generated observations for machine-learning experimentation. It should not be interpreted as a catalogue of entirely observed astronomical objects."
+20,"ASTEROID X: The Orbital Intelligence Challenge
+PROBLEM STATEMENT
+Asteroid catalogues contain enormous amounts of information describing orbital motion, brightness, physical characteristics, observation uncertainty, and object classifications. These measurements provide an opportunity to estimate important asteroid properties computationally.
+The difficulty lies in separating useful physical information from identifiers, catalogue metadata, uncertainty fields, missing measurements, and extreme orbital observations that can strongly influence a predictive model.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Explore and clean asteroid orbital and physical measurements.
+● Identify meaningful relationships among asteroid characteristics.
+● Select useful information from a large set of catalogue attributes.
+● Develop a suitable model to estimate an important asteroid property.
+● Evaluate the stability and reliability of the predictions.
+OBJECTIVE
+Extract meaningful physical relationships from asteroid catalogue data and develop a robust predictive system capable of handling the imperfections of large astronomical datasets.
+EVALUATION
+Solutions will be evaluated on:
+● Predictive performance
+● Outlier and missing-value treatment
+● Feature selection
+● Model robustness
+● Quality of reasoning and methodology"
+21,"RED PLANET PULSE: The Martian Environment Challenge
+PROBLEM STATEMENT
+The Martian atmosphere continuously changes with local time, temperature, and environmental conditions. Instruments operating on the surface of Mars collect repeated humidity and temperature measurements that allow researchers to study these variations.
+Unlike conventional tabular datasets, sensor observations introduce additional complications such as missing readings, measurement uncertainties, correlated sensors, temporal information, repeated measurements, and occasional abnormal values.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Explore and preprocess Martian environmental sensor measurements.
+● Analyse relationships between humidity and temperature observations.
+● Determine which sensor readings provide useful predictive information.
+● Handle missing, redundant, and abnormal measurements appropriately.
+● Develop and evaluate a reliable environmental prediction model.
+OBJECTIVE
+Use Martian environmental measurements to model atmospheric behaviour while developing a preprocessing and modelling strategy suitable for large real-world sensor datasets.
+EVALUATION
+Solutions will be evaluated on:
+● Predictive performance
+● Sensor-data preprocessing
+● Missing-value and anomaly handling
+● Feature selection and interpretation
+● Model robustness and methodology"
+22,"FROZEN FIRE: The Comet Activity Prediction Challenge
+PROBLEM STATEMENT
+Comets are icy Solar-System bodies whose activity can change dramatically as their orbits bring them closer to the Sun. Solar radiation heats volatile material within the nucleus, producing gas and dust that can transform an otherwise faint object into an active comet.
+Activity is influenced by several interacting factors, including orbital geometry, nucleus characteristics, surface properties, volatile composition, solar exposure, and thermal conditions. Determining activity from these combined properties creates a challenging multivariable classification problem.
+YOUR MISSION
+Build a machine-learning pipeline that can:
+● Analyse the orbital, physical, and compositional properties of comets.
+● Identify characteristics associated with increased cometary activity.
+● Preprocess imperfect or incomplete observations appropriately.
+● Classify objects according to their expected activity level.
+● Evaluate the reliability and generalization of the resulting model.
+OBJECTIVE
+Develop a robust comet-activity classification system that captures relationships between orbital dynamics, solar heating, composition, and physical characteristics.
+EVALUATION
+Solutions will be evaluated on:
+● Classification performance
+● Data cleaning and preprocessing
+● Feature selection and interpretation
+● Model robustness
+● Quality of reasoning and methodology
+● Dataset Note: This challenge uses a physics-inspired synthetic dataset created for machine-learning experimentation. The generated objects should not be interpreted as individually observed real comets."

@@ -26,3 +26,7 @@ ENV/
 .idea/
 .vscode/
 *.ipynb_checkpoints
+
+# Large datasets exceeding GitHub limits
+Dataset/
+DATASET/
