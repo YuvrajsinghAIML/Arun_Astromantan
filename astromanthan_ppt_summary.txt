@@ -1,0 +1,136 @@
+================================================================================
+ASTROMANTHAN 2026 - PPT SLIDES CONTENT SUMMARY
+================================================================================
+
+--------------------------------------------------------------------------------
+SLIDE 1: TITLE SLIDE
+--------------------------------------------------------------------------------
+ASTROMANTHAN 2026
+ASTROMANTHAN 2.0
+ASTRONOMY CLUB of Thakur College of Engineering & Technology (AC-TCET)
+"Jaha ML mile Antariksh se"
+
+Problem Statement:
+Problem Statement 19: PLANETARY FORGE - The Celestial Environment Prediction Challenge
+
+Team Details:
+Team Name: [Your Team Name]
+Member 1: Yuvraj Singh (Team Lead / ML Developer)
+Member 2: [Member 2 Name]
+Member 3: [Member 3 Name]
+Member 4: [Member 4 Name]
+
+--------------------------------------------------------------------------------
+SLIDE 2: EXPLAIN MORE ABOUT PROBLEM STATEMENT
+--------------------------------------------------------------------------------
+ASTROMANTHAN 2026
+Explain more about problem statement
+
+Problem Statement:
+"PLANETARY FORGE: The Celestial Environment Prediction Challenge"
+
+Key Challenge Points:
+• The Complex Planetary Environment:
+  A celestial body's environmental condition is governed by an intricate web of 
+  physical properties (mass, radius, density, gravity), orbital dynamics 
+  (semi-major axis, orbital velocity), and stellar radiation from its host star.
+
+• Noisy & Corrupted Survey Data:
+  Raw astronomical survey datasets contain significant observational noise, 
+  synthetically injected corruptions (e.g., hidden string values like 'invalid', 
+  'abc'), unphysical metadata ('random_code', 'junk_status', 'irrelevant_note'), 
+  and missing values.
+
+• Core Challenge:
+  Traditional manual astronomical calculations for thermal and atmospheric 
+  equilibrium across thousands of candidate planets are computationally slow and 
+  error-prone when noise is present.
+
+• The Objective:
+  Build a robust Machine Learning pipeline that detects noise, extracts key 
+  astrophysical drivers, and accurately predicts planetary environmental conditions 
+  (specifically Mean Surface Temperature) across celestial bodies.
+
+--------------------------------------------------------------------------------
+SLIDE 3: SOLUTIONS FOR YOUR PROBLEM STATEMENT
+--------------------------------------------------------------------------------
+ASTROMANTHAN 2026
+Solutions for your problem statement
+
+Our 3-Phase Machine Learning Solution Pipeline:
+
+1. Data Sanitization & Noise Elimination Pipeline:
+   • Removed unphysical and non-informative metadata columns (random_code, 
+     junk_status, irrelevant_note, data_origin, base_object).
+   • Cleared corrupted values: Detected and handled obfuscated text strings 
+     ('invalid', 'abc') embedded inside numeric columns, converting them to NaN.
+   • Handled missing observations to yield a pristine, pure physical dataset 
+     of 1,595 valid celestial bodies.
+
+2. Astrophysical Feature Analysis & Selection:
+   • Validated fundamental astrophysical principles:
+     - Distance from Sun, Aphelion, Perihelion exhibit strong negative correlation 
+       (-0.42) due to the Inverse-Square Law of radiation.
+     - Host Star Luminosity (+0.32) and Temperature (+0.35) show strong positive 
+       heating correlation.
+     - Orbital Velocity (+0.97) and Density (+0.49) capture orbital distance and 
+       planetary composition.
+   • Curated core predictive feature set: Distance from Sun, Host Star Luminosity, 
+     Host Star Temperature, Density, Surface Pressure, and Gravity.
+
+3. Robust Modeling & Validation Architecture:
+   • 80/20 Train-Test split with fixed random seeds for reproducibility.
+   • Rigorous evaluation on completely unseen planetary data using R² Score 
+     and Root Mean Squared Error (RMSE).
+
+--------------------------------------------------------------------------------
+SLIDE 4: HOW DOES YOUR MODEL HELPS SOLVING THIS?
+--------------------------------------------------------------------------------
+ASTROMANTHAN 2026
+How does your model helps solving this?
+
+1. Automated High-Accuracy Temperature Prediction:
+   • Replaces tedious manual spectroscopy calculations by estimating planetary 
+     equilibrium temperatures directly from readily observable stellar and 
+     orbital parameters.
+
+2. Benchmark Performance & Evaluation:
+   • Baseline Linear Regression:
+     - Captures linear thermal gradients.
+     - Result: R² Score = 0.465, RMSE = 201.2 Kelvin.
+   • Non-Linear Tree Ensemble (Random Forest Regressor):
+     - Successfully models the non-linear Stefan-Boltzmann radiation law 
+       (T proportional to [L / D^2]^(1/4)).
+     - Result: R² Score = 0.978 (97.8% variance explained), RMSE = 39.5 Kelvin.
+
+3. Value & Impact to Planetary Science:
+   • Fast Screening: Instantly categorizes thousands of candidate planets into 
+     extreme cold, habitable thermal ranges, or scorching environments.
+   • Noise Resilience: Autonomous data preprocessing makes the model immune to 
+     dirty or corrupted sensor inputs.
+   • Scientific Validation: Model decision trees naturally mirror actual physical 
+     laws of stellar insolation and planetary equilibrium.
+
+--------------------------------------------------------------------------------
+SLIDE 5: FUTURE SCOPE
+--------------------------------------------------------------------------------
+ASTROMANTHAN 2026
+Future Scope
+
+1. Exoplanet Habitability Index Classification:
+   • Extend the regression model into a classification system predicting the 
+     "Habitable Zone" (Goldilocks Zone) and liquid water viability potential.
+
+2. Physics-Informed Neural Networks (PINNs):
+   • Embed thermodynamic and radiative-convective equilibrium equations directly 
+     into the loss function for ultra-reliable extrapolation on exotic exoplanets.
+
+3. Integration with Real-World Space Telescopes:
+   • Adapt the pipeline for real observational feeds from NASA Kepler, TESS, 
+     and the James Webb Space Telescope (JWST) atmospheric transmission spectra.
+
+4. Interactive Astronomy Web Application:
+   • Deploy an interactive dashboard (Streamlit / Flask) for astronomers and 
+     students to input star/orbital properties and simulate exoplanet climates 
+     in real time.
+================================================================================
